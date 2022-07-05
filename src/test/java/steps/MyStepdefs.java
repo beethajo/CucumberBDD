@@ -9,6 +9,7 @@ public class MyStepdefs {
     @Given("user navigates to facebook website")
     public void userNavigatesToFacebookWebsite() {
         System.out.println("facebook-user navigates to facebook website");
+        System.out.println();
     }
 
     @When("user validates the home page title")
@@ -17,8 +18,9 @@ public class MyStepdefs {
     }
 
     @Then("user entered the username")
-    public void userEnteredTheUsername() {
+    public void userEnteredTheUsername() throws InterruptedException {
         System.out.println("facebook-user entered the username");
+        Thread.sleep(10000);
     }
     @Then("user should be successfully logged in")
     public void userShouldBeSuccessfullyLoggedIn() {
@@ -41,8 +43,9 @@ public class MyStepdefs {
         System.out.println("user entered the Invalid username");
     }
     @Then("user entered the Invalid password")
-    public void user_entered_the_invalid_password() {
+    public void user_entered_the_invalid_password() throws InterruptedException {
         System.out.println("user entered the Invalid password");
+        Thread.sleep(10000);
     }
     @Then("user should not  successfully logged in")
     public void user_should_not_successfully_logged_in() {
@@ -50,6 +53,13 @@ public class MyStepdefs {
     }
 
 
+    @Then("user entered the username {string}")
+    public void userEnteredTheUsername(String username) {
+        System.out.println("user name is "+username);
+    }
 
-
+    @And("user entered the password   {string}")
+    public void userEnteredThePassword(String password) {
+        System.out.println("password is "+password);
+    }
 }
