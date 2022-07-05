@@ -1,9 +1,14 @@
 package steps;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
+import java.sql.SQLOutput;
+import java.util.List;
+import java.util.Map;
 
 public class MyStepdefs {
     @Given("user navigates to facebook website")
@@ -53,6 +58,18 @@ public class MyStepdefs {
     }
 
 
+
+    
+
+
+
+
+
+
+
+
+
+
     @Then("user entered the username {string}")
     public void userEnteredTheUsername(String username) {
         System.out.println("user name is "+username);
@@ -61,5 +78,16 @@ public class MyStepdefs {
     @And("user entered the password   {string}")
     public void userEnteredThePassword(String password) {
         System.out.println("password is "+password);
+    }
+
+    @And("user select the age category")
+    public void userSelectTheAgeCategory(List<String> list) {
+        System.out.println("user select the age category ----> "+list.get(1));
+    }
+
+    @And("user select id and password")
+    public void userSelectIdAndPassword(DataTable table) {
+        List<Map<String,String>> data=table.asMaps(String.class,String.class);
+        System.out.println("---user id and password :"+data.get(1).get("id")+"    "+data.get(1).get("password"));
     }
 }

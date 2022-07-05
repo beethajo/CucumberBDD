@@ -1,21 +1,14 @@
 package runner;
 
-import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
-import io.cucumber.plugin.event.Node;
-import io.cucumber.testng.AbstractTestNGCucumberTests;
-import io.cucumber.testng.CucumberOptions;
-import org.testng.ITestContext;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import org.testng.xml.XmlSuite;
 
-import java.util.Arrays;
+import io.cucumber.testng.CucumberOptions;
+import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
         // tags = "",
         features = "src/test/resources/features/login.feature",
-        glue = "steps"
+        glue = "steps",
+        monochrome = true
 )
 public class testrunner extends CustomAbstractTestNGCucumberTests {
 
