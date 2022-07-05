@@ -1,3 +1,4 @@
+@sanity
 Feature: Login In order to perform successful login
 
 

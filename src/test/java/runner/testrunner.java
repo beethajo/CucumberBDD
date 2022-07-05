@@ -6,9 +6,10 @@ import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
         // tags = "",
-        features = "src/test/resources/features/login.feature",
+        features = "src/test/resources/features",
         glue = "steps",
         monochrome = true
+
 )
 public class testrunner extends CustomAbstractTestNGCucumberTests {
 

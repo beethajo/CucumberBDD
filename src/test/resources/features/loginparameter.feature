@@ -1,5 +1,6 @@
+@functional
 Feature: Login In order to perform successful login
-
+@sanity
   Scenario Outline: In order to verify login to facebook
     Given user navigates to facebook website
     When user validates the home page title
