@@ -8,7 +8,10 @@ import org.testng.annotations.DataProvider;
         // tags = "",
         features = "src/test/resources/features",
         glue = "steps",
-        monochrome = true
+        monochrome = true,
+       // tags={"@sanity,@functional"}
+        tags="@sanity",
+        plugin = {"pretty"}
 
 )
 public class testrunner extends CustomAbstractTestNGCucumberTests {

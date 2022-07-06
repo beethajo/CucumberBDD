@@ -1,6 +1,8 @@
 package steps;
 
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,6 +13,19 @@ import java.util.List;
 import java.util.Map;
 
 public class MyStepdefs {
+
+
+
+    @Before("@sanity")
+    public void setUp()
+    {
+        System.out.println("Launch the browser----sanity");
+    }
+    @After("@sanity")
+    public void tearDown()
+    {
+        System.out.println("close the browser---sanity");
+    }
     @Given("user navigates to facebook website")
     public void userNavigatesToFacebookWebsite() {
         System.out.println("facebook-user navigates to facebook website");
