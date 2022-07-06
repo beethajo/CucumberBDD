@@ -11,7 +11,8 @@ import java.io.File;
 
 @CucumberOptions(
         // tags = "",
-        features = "src/test/resources/features/job.feature",
+        //features = "src/test/resources/features/loginparameter.feature",
+        features = "src/test/resources/features",
         glue = "steps",
         monochrome = true,
        // tags={"@sanity,@functional"}
